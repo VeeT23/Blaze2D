@@ -1,5 +1,3 @@
-
-#include <SDL3/SDL.h>
 #include <mutex>
 
 #include "Blaze2D/internal/SDLManager.h"

@@ -46,9 +46,9 @@ FetchContent_MakeAvailable(SDL3_image)
 
 # ================= Blaze2D =================
 add_library(Blaze2D STATIC
-  src/Core.cpp
+  src/App.cpp
   src/internal/SDLManager.cpp
-)
+  src/window/Window.cpp)
 
 # Public headers
 target_include_directories(Blaze2D
