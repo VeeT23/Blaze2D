@@ -1,8 +1,8 @@
 
-#include <blaze/Core.h>
+#include <Blaze2D/Core.h>
 #include <atomic>
 
-#include "blaze/internal/SDLManager.h"
+#include "Blaze2D/internal/SDLManager.h"
 
 
 namespace blaze {

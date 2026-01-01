@@ -2,7 +2,7 @@
 #include <SDL3/SDL.h>
 #include <mutex>
 
-#include "blaze/internal/SDLManager.h"
+#include "Blaze2D/internal/SDLManager.h"
 
 
 namespace blaze::detail {
