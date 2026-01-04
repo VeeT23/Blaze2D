@@ -31,8 +31,19 @@ namespace blaze {
         throw std::runtime_error("Window not found: " + name);
     }
 
-    void Shutdown()
+    void App::removeWindow(Window& window)
     {
-        blaze::detail::shutdown_sdl();
+        windows.erase(
+            std::remove_if(
+                windows.begin(),
+                windows.end(),
+                [&](const std::unique_ptr<Window>& w) {
+                    return w.get() == &window;
+                }
+            ),
+            windows.end()
+        );
     }
+
+
 } // namespace blaze

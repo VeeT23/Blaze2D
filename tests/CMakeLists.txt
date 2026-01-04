@@ -1,7 +1,7 @@
 
 add_executable(blaze2d_tests
-  test_core.cpp
-)
+  "test_app.cpp"
+ "test_manifest.cpp")
 
 target_link_libraries(blaze2d_tests
   PRIVATE

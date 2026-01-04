@@ -34,3 +34,32 @@ TEST_CASE("blaze::App creates windows correctly", "[App][Window]") {
         CHECK(test_3.getTitle() == "This is a test.");
     }
 }
+
+TEST_CASE("blaze::App gets windows correctly", "[App][Window]") {
+    blaze::App app;
+    blaze::Window& test = app.createWindow("Test");
+
+    SECTION("Returns correct reference") {
+        blaze::Window& result = app.getWindow("Test");
+        CHECK(&test == &result);
+    }
+    
+    SECTION("Fails if window doesn't exist") {
+        REQUIRE_THROWS(app.getWindow("Fail"));
+    }
+}
+
+TEST_CASE("blaze::App destroys windows correctly", "[App][Window]") {
+   
+    blaze::App app;
+    blaze::Window& test = app.createWindow("Test");
+
+    INFO("Ensuring window was made succesfully");
+    REQUIRE_NOTHROW(app.getWindow("Test"));
+
+    INFO("Ensuring removeWindow() calls without error");
+    REQUIRE_NOTHROW(app.removeWindow(test));
+
+    INFO("Ensuring window was deleted");
+    REQUIRE_THROWS(app.getWindow("Test"));
+}

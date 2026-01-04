@@ -31,7 +31,7 @@ FetchContent_MakeAvailable(SDL3)
 FetchContent_Declare(
   SDL3_image
   GIT_REPOSITORY https://github.com/libsdl-org/SDL_image.git
-  GIT_TAG main
+  GIT_TAG d78dd65 # Pinned to release 3.2.6
 )
 
 set(SDL3IMAGE_AVIF OFF CACHE BOOL "" FORCE)
@@ -48,7 +48,9 @@ FetchContent_MakeAvailable(SDL3_image)
 add_library(Blaze2D STATIC
   src/App.cpp
   src/internal/SDLManager.cpp
-  src/window/Window.cpp)
+  src/window/Window.cpp 
+  src/ui/Container.cpp
+  src/util/Color.cpp "include/Blaze2D/util/Manifest.h" "src/util/Manifest.cpp")
 
 # Public headers
 target_include_directories(Blaze2D
