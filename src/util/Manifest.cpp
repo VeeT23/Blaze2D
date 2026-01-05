@@ -154,6 +154,8 @@ namespace blaze
             );
         }
 
+        //TODO: Add json support
+
         std::string line;
         std::size_t lineNumber = 0;
 

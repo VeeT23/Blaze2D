@@ -1,15 +1,15 @@
 #pragma once
 
-namespace Blaze {
+namespace blaze {
     class Vec2 {
     public:
-        int x;
-        int y;
+        float x;
+        float y;
 
         // Constructors
-        constexpr Vec2() : x(0), y(0) {}
-        constexpr Vec2(int x, int y) : x(x), y(y) {}
-        constexpr Vec2(float x, float y) : x((int)x), y((int)y) {}
+        constexpr Vec2() : x(0.0f), y(0.0f) {}
+        constexpr Vec2(int x, int y) : x((float)x), y((float)y) {}
+        constexpr Vec2(float x, float y) : x(x), y(y) {}
 
         // Copy default
         constexpr Vec2(const Vec2&) = default;
@@ -39,7 +39,7 @@ namespace Blaze {
     };
 
     // Allow scalar * Vec2
-    inline constexpr Vec2 operator*(int s, const Vec2& v) {
+    inline constexpr Vec2 operator*(float s, const Vec2& v) {
         return { v.x * s, v.y * s };
     }
 }

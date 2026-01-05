@@ -9,8 +9,8 @@ namespace blaze {
 
 	class App {
 	public:
-		/*
-		* App is a root object that parents all windows.
+		/**
+		* @brief App is a root object that parents all windows.
 		* Only one app object should be made as App is responsible for the SDL's lifetime.
 		*/
 		App();

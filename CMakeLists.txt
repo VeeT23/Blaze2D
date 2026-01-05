@@ -50,7 +50,7 @@ add_library(Blaze2D STATIC
   src/internal/SDLManager.cpp
   src/window/Window.cpp 
   src/ui/Container.cpp
-  src/util/Color.cpp "include/Blaze2D/util/Manifest.h" "src/util/Manifest.cpp")
+  src/util/Color.cpp "include/Blaze2D/util/Manifest.h" "src/util/Manifest.cpp" "include/Blaze2D/graphics/Atlas.h" "src/graphics/Atlas.cpp" "include/Blaze2D/util/Rect.h")
 
 # Public headers
 target_include_directories(Blaze2D
